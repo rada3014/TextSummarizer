@@ -1,5 +1,5 @@
 import streamlit as st
-from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers import pipeline
 
 def main():
     st.title("Text Summarization")
@@ -10,7 +10,6 @@ def main():
         min_length=20,
         max_length=40,
         truncation=True,
-        model_kwargs={"cache_dir": cache_dir},
     ) 
 
     # User input
